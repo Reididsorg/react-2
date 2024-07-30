@@ -5,9 +5,11 @@ import Home from './pages/Home'
 import Survey from './pages/Survey'
 import Header from './components/Header'
 import Error from './components/Error'
+import Results from './pages/Results'
+import Freelances from './pages/Freelances'
 // On ajoute nos composants
-import ClientForm from './components/ClientForm'
-import FreelanceForm from './components/FreelanceForm'
+import ClientForm from './components/Color/ClientColor'
+import FreelanceForm from './components/Color/FreelanceColor'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
@@ -21,6 +23,8 @@ root.render(
         <Route path="client" element={<ClientForm />} />
         <Route path="freelance" element={<FreelanceForm />} />
       </Route>
+      <Route path="/freelances" element={<Freelances />} />
+      <Route path="/results" element={<Results />} />
       <Route path="*" element={<Error />} />
     </Routes>
   </Router>,
