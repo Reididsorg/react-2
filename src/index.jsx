@@ -10,11 +10,20 @@ import Freelances from './pages/Freelances'
 // On ajoute nos composants
 import ClientForm from './components/Color/ClientColor'
 import FreelanceForm from './components/Color/FreelanceColor'
+import { createGlobalStyle } from 'styled-components'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
+
+const GlobalStyle = createGlobalStyle`
+    div {
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+    }
+`
+
 root.render(
   // <React.StrictMode>
   <Router>
+    <GlobalStyle />
     <Header />
     <Routes>
       <Route path="/" element={<Home />} />
